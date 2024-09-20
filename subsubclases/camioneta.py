@@ -5,4 +5,4 @@ class Camioneta(Coche):
         super().__init__(color, ruedas, velocidad, cilindrada)
         self.carga = carga
     def __str__(self):
-        return Coche.__str__(self) + ", {} kg de carga".format(self.carga)
+        return super().__str__() + ", {} kg de carga".format(self.carga)

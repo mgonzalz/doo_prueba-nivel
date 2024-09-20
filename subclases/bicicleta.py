@@ -7,4 +7,4 @@ class Bicicleta(Vehiculo):
             raise ValueError("El tipo de bicicleta debe ser 'urbana' o 'deportiva'")
         self.tipo = tipo
     def __str__(self):
-        return super().__str__() + ", tipo {}".format(self.tipo)
+        return Vehiculo.__str__(self) + ", tipo {}".format(self.tipo)
