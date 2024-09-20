@@ -15,10 +15,11 @@ def catalogar(lista, ruedas=None):
     '''
     contador = 0
     for i in lista:
-        if i.get_ruedas() == ruedas or ruedas is None:
+        if i.get_ruedas() == ruedas:
             print(type(i).__name__, ": ",i)
             contador += 1
-    
+    if ruedas is None:
+        return
     print("Se han encontrado {} vehículos con {} ruedas".format(contador, ruedas))
 
 
@@ -40,4 +41,6 @@ def main():
 
     catalogar(vehiculos, 4)
     catalogar(vehiculos, 2)
+    catalogar(vehiculos, 0)
+    catalogar(vehiculos, None)
     catalogar(vehiculos)
